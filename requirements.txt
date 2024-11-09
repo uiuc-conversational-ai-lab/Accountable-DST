@@ -1,0 +1,16 @@
+transformers==4.44
+accelerate
+bitsandbytes
+pandas
+datasets
+einops 
+wandb
+trl
+peft
+pandas
+fuzzywuzzy
+python-Levenshtein
+tensorboardX
+scikit-learn
+matplotlib
+
