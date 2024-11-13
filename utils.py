@@ -9,9 +9,9 @@ max_token_limit = 900
 # MultiWOZ dataset
 
 #Dataset path
-train_file = "../MultiWOZ2.4-main/data/mwz2.4/train_dials.json"
-dev_file = "../MultiWOZ2.4-main/data/mwz2.4/dev_dials.json"
-test_file = "../MultiWOZ2.4-main/data/mwz2.4/test_dials.json"
+train_file = os.path.join("mwz2.4", "train_dials.json")
+dev_file = os.path.join("mwz2.4", "dev_dials.json")
+test_file = os.path.join("mwz2.4", "test_dials.json")
 
 #Multiwoz domain and slot details
 domain_list = ["attraction", "hotel", "restaurant", "taxi", "train"]
@@ -168,22 +168,19 @@ def get_prompt(conv_history, model_type, tokenizer):
 #-------------------------------------
 # SNIPS dataset
 
+#Load SNIPS domain and slot details
 def get_snips_details():
-    filename = os.path.join("../snips_slurp", "snips", f"domains.json")
+    filename = os.path.join("snips", "domains.json")
     with open(filename, 'r') as f:
         domains = json.load(f)
 
-    filename = os.path.join("../snips_slurp", "snips", f"slots.json")
+    filename = os.path.join("snips", "slots.json")
     with open(filename, 'r') as f:
         lst_slots = json.load(f)
 
-    filename = os.path.join("../snips_slurp", "snips", f"slot_dict.json")
+    filename = os.path.join("snips", "slot_dict.json")
     with open(filename, 'r') as f:
         slot_dict = json.load(f)
-
-    #print(f"domains: {domains}")
-    #print(f"lst_slots: {lst_slots}")
-    #print(f"slot_dict: {slot_dict}")
             
     slot_details = ""
     for dom in slot_dict:
@@ -205,7 +202,7 @@ def get_slot_label_snips(dom_slot_dict, bs):
     return lbl_slots
 
 def load_snips_data(mode, slots, dom_slot_dict, test_run, conv_limit, logger):
-    filename = os.path.join("../snips_slurp", "snips", f"{mode}.json")
+    filename = os.path.join("snips", f"{mode}.json")
     with open(filename, "r") as f:
         data = json.load(f)
     c_conv = 0
@@ -269,4 +266,6 @@ def get_prompt_snips(utt, domains, slot_details_snips, model_type, tokenizer):
     else:
         prompt = prompt + tokenizer.eos_token
     return prompt
+
+#-------------------------------------
     
