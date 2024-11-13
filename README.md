@@ -18,7 +18,7 @@ The experiments are performed on [MultiWOZ 2.4](https://github.com/smartyfh/Mult
 ```console
 ❱❱❱ python train_dst.py -path=<model_path> -data=<mwz/snips>
 ```
-2. Accountibility Model (with slot classification)
+2. Accountability Model (with slot classification)
 ```console
 ❱❱❱ python train_dst.py -path=<model_path> -data=<mwz/snips> -slot
 ```
@@ -28,7 +28,7 @@ The experiments are performed on [MultiWOZ 2.4](https://github.com/smartyfh/Mult
 ```console
 ❱❱❱ python generate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint>
 ```
-2. Accountibility Model
+2. Accountability Model
 ```console
 ❱❱❱ python generate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint> -slot
 ```
@@ -39,12 +39,12 @@ Use -dev to generate for the dev data. Default is test data.
 ```console
 ❱❱❱ python evaluate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint>
 ```
-2. Accountibility Model (Self-Correct)
+2. Accountability Model (Self-Correct)
 ```console
 ❱❱❱ python evaluate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint> -slot
 ```
 
-3. Accountibility Model (Oracle-Correct)
+3. Accountability Model (Oracle-Correct)
 ```console
 ❱❱❱ python evaluate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint> -slot -oracle
 ```
