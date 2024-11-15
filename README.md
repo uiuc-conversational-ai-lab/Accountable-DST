@@ -7,7 +7,7 @@ Python 3.12 or later.
 ```
 
 ## Prepare dataset
-The experiments are performed on [MultiWOZ 2.4](https://github.com/smartyfh/MultiWOZ2.4) and [Snips](https://github.com/smartyfh/MultiWOZ2.4). We provide the necessary files for both datasets in mwz2.4.zip and snips.zip files for convenience. Unzip the folders before running the scripts. Run the following script to create the required metadata for the Snips dataset.
+The experiments are performed on [MultiWOZ 2.4](https://github.com/smartyfh/MultiWOZ2.4) and [Snips](https://github.com/snipsco/snips-nlu). We provide the necessary files for both datasets in mwz2.4.zip and snips.zip files for convenience. Unzip the folders before running the scripts. Run the following script to create the required metadata for the Snips dataset.
 
 ```console
 ❱❱❱ python create_snips_info.py
