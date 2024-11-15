@@ -128,7 +128,8 @@ def get_mwz_dataset(test_run, conv_limit, logger, model_type, tokenizer, train_a
         dataset["train"] = Dataset.from_dict(train_data)
     else:
         train_data = Dataset.from_dict(train_data).shuffle(seed=0)
-        s_idx = [v for v in range(train_limit)]
+        d_limit = min(train_limit, len(train_data))
+        s_idx = [v for v in range(d_limit)]
         sample_train_data = train_data.select(s_idx)
         dataset["train"] = sample_train_data
     dataset["dev"] = Dataset.from_dict(dev_data)

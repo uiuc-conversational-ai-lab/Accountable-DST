@@ -32,8 +32,7 @@ parser.add_argument('-batch','--batch', help='Per device batch size', type=int, 
 parser.add_argument('-grad_acc','--grad_acc', help='Gradient Accumulation', type=int, required=False, default=4)
 parser.add_argument('-lr','--lr', help='Learning rate', type=float, required=False, default=5e-5)
 parser.add_argument('-m','--m', help='Weight of classification loss', type=float, required=False, default=0.25)
-parser.add_argument('-all','--all', help='Use all training data', default=True, action='store_true')
-parser.add_argument('-train_limit','--train_limit', help='No. of samples if not training with all data', type=int, required=False, default=15000)
+parser.add_argument('-train_limit','--train_limit', help='No. of samples if not training with all data. Default is 0 that indicates all data.', type=int, required=False, default=0)
 parser.add_argument('-data','--data', help='Dataset (mwz/snips)', type=str, default='mwz', required=False, choices=['mwz', 'snips'])
 
 args = vars(parser.parse_args())
@@ -46,9 +45,9 @@ batch_size = args['batch']
 grad_acc = args['grad_acc']
 learning_rate = args['lr']
 c_wt = args['m']
-train_all = args['all']
 train_limit = args['train_limit']
 dataset_name = args['data']
+train_all = True if(train_limit==0) else False
 
 if "llama" in model_name.lower():
     model_type = "llama"
