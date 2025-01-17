@@ -48,4 +48,4 @@ Use -dev to generate for the dev data. Default is test data.
 ```console
 ❱❱❱ python evaluate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint> -slot -oracle
 ```
-The results are saved in dst_*.txt files indide model directory. Use -dev to evaluate for the dev data. efault is test data.
+The results are saved in dst_*.txt files inside the model directory. Use -dev to evaluate for the dev data. The default is test data.
