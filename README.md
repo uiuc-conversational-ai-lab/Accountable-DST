@@ -51,7 +51,7 @@ Use -dev to generate for the dev data. Default is test data.
 ```
 The results are saved in dst_*.txt files inside the model directory. Use -dev to evaluate for the dev data. The default is test data.
 
-##Citation
+## Citation
 ```console
 @inproceedings{dey-etal-2025-know,
     title = "Know Your Mistakes: Towards Preventing Overreliance on Task-Oriented Conversational {AI} Through Accountability Modeling",
