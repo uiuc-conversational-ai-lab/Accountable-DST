@@ -24,7 +24,7 @@ The experiments are performed on [MultiWOZ 2.4](https://github.com/smartyfh/Mult
 ```console
 ❱❱❱ python train_dst.py -path=<model_path> -data=<mwz/snips> -slot
 ```
-Checkpoint for the best model: [sdey15/accountability-model-for-dst](https://huggingface.co/sdey15/accountability-model-for-dst)
+Model checkpoint: [sdey15/accountability-model-for-dst](https://huggingface.co/sdey15/accountability-model-for-dst)
 
 ## Generate DST
 1. Base Model
