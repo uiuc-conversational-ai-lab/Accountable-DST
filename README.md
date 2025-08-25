@@ -1,4 +1,4 @@
-# Towards Preventing Overreliance on Task-Oriented Conversational AI Through Accountability Modeling
+# Know Your Mistakes: Towards Preventing Overreliance on Task-Oriented Conversational AI Through Accountability Modeling
 
 ## Install dependencies
 Python 3.12 or later.
@@ -50,3 +50,26 @@ Use -dev to generate for the dev data. Default is test data.
 ❱❱❱ python evaluate_dst.py -path=<model_path> -data=<mwz/snips> -best=<model_checkpoint> -slot -oracle
 ```
 The results are saved in dst_*.txt files inside the model directory. Use -dev to evaluate for the dev data. The default is test data.
+
+##Citation
+```console
+@inproceedings{dey-etal-2025-know,
+    title = "Know Your Mistakes: Towards Preventing Overreliance on Task-Oriented Conversational {AI} Through Accountability Modeling",
+    author = {Dey, Suvodip  and
+      Sun, Yi-Jyun  and
+      Tur, Gokhan  and
+      Hakkani-T{\"u}r, Dilek},
+    editor = "Che, Wanxiang  and
+      Nabende, Joyce  and
+      Shutova, Ekaterina  and
+      Pilehvar, Mohammad Taher",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-long.1399/",
+    doi = "10.18653/v1/2025.acl-long.1399",
+    pages = "28830--28843",
+    ISBN = "979-8-89176-251-0"}
+```
